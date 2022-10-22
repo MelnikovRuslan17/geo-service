@@ -1,4 +1,4 @@
-package ru.netology.test.i18n;
+package ru.netology.i18n;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-package ru.netology.test.geo;
+package ru.netology.geo;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
