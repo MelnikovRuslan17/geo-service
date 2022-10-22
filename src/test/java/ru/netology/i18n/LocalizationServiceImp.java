@@ -10,7 +10,7 @@ import ru.netology.entity.Country;
 import ru.netology.i18n.LocalizationServiceImpl;
 
 public class LocalizationServiceImp {
-    LocalizationServiceImpl localizationService;
+    private LocalizationServiceImpl localizationService;
 
     @BeforeEach
     public void localization_init() {

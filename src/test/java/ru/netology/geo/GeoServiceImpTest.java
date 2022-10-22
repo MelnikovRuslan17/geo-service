@@ -12,7 +12,7 @@ import ru.netology.GeoServiceImpl;
 import java.util.stream.Stream;
 
 public class GeoServiceImpTest {
-    GeoServiceImpl geoService;
+    private GeoServiceImpl geoService;
 
     @BeforeEach
    public void geo_init() {
@@ -26,7 +26,7 @@ public class GeoServiceImpTest {
 
     @MethodSource("source")
     @ParameterizedTest
-   public void geo_test_by_name(String ip, String expected) {
+   public void geo_test_by_get_city(String ip, String expected) {
         Location location = geoService.byIp(ip);
         String result = location.getCity();
         Assertions.assertEquals(expected, result);
