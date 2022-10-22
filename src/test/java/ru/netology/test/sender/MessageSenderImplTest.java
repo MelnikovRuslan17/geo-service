@@ -1,12 +1,11 @@
+package ru.netology.test.sender;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import ru.netology.entity.Country;
 import ru.netology.entity.Location;
-import ru.netology.geo.GeoService;
-import ru.netology.geo.GeoServiceImpl;
-import ru.netology.i18n.LocalizationService;
+import ru.netology.GeoServiceImpl;
 import ru.netology.i18n.LocalizationServiceImpl;
 import ru.netology.sender.MessageSender;
 import ru.netology.sender.MessageSenderImpl;
@@ -16,7 +15,7 @@ import java.util.Map;
 
 public class MessageSenderImplTest {
     @Test
-    void test_languge_at_ip(){
+    public void message_sender_send_text_locate_ru(){
         GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
         Mockito.when(geoService.byIp(Mockito.matches("172.")))
                 .thenReturn(new Location("Moscow", Country.RUSSIA,null,0));
@@ -35,7 +34,7 @@ public class MessageSenderImplTest {
     }
 
     @Test
-    void test_language_at_ip_eng(){
+    public void message_sender_send_text_locate_en(){
         GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
         Mockito.when(geoService.byIp(Mockito.matches("96.")))
                 .thenReturn(new Location("New York", Country.USA, null, 0));
